@@ -26,7 +26,26 @@ public class Conta {
         if (valor > 0){
             saldo = saldo + valor;
         } else{
-            System.out.println("Depósito invalido");
+            System.out.println("Depósito inválido");
         }
+    }
+
+    boolean sacar(double valor){
+        if (valor <= 0){
+            System.out.println("Valor de Saque Inválido");
+            return false;
+        }
+        if (valor > saldo){
+            System.out.println("Saldo Insuficiente");
+            return false;
+        }
+        saldo = saldo - valor;
+            return true;
+    }
+
+    void exibirExtrato(){
+        System.out.println("Titular: " + titular);
+        System.out.println("Conta: " + numero);
+        System.out.println("Saldo: R$ " + saldo);
     }
 }
