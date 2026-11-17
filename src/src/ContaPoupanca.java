@@ -7,5 +7,6 @@ public class ContaPoupanca extends Conta{
     }
 
     void aplicarRendimento(double taxaRendimento){
+        saldo = saldo + (saldo * taxaRendimento);
     }
 }

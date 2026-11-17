@@ -3,7 +3,7 @@ public class Main {
 
         Conta c = new Conta("0001", "Brenda");
         Conta c2 = new Conta("0002", "Guilherme");
-        Conta cp = new ContaPoupanca("0003", "Miguel", 0.01);
+        ContaPoupanca cp = new ContaPoupanca("0003", "Miguel", 0.01);
 
         c.depositar(500);
         c.sacar(200);
@@ -17,7 +17,7 @@ public class Main {
         c2.exibirExtrato();
 
         cp.depositar(1000);
-        cp.aplicarRendimento();
+        cp.aplicarRendimento(0.01);
         cp.exibirExtrato();
 
 
