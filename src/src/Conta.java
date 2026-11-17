@@ -21,4 +21,12 @@ public class Conta {
     public double getSaldo(){
         return saldo;
     }
+
+    void depositar(double valor){
+        if (valor > 0){
+            saldo = saldo + valor;
+        } else{
+            System.out.println("Depósito invalido");
+        }
+    }
 }
